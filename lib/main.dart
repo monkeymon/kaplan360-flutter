@@ -78,17 +78,23 @@ class _LoginPageState extends State<LoginPage> {
         // in the middle of the parent.
           image: DecorationImage(image: AssetImage("assets/loginBackground.jpg"), fit: BoxFit.cover),
         ),
-        child: Row (
+        child: Column (
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            TextFormField(
-              decoration: InputDecoration(                  
-                labelText: 'CT Number'
+            Expanded(
+              child: TextFormField(
+                decoration: InputDecoration(                  
+                  labelText: 'CT Number'
+                )
               )
             ),
-            TextFormField(
-              obscureText: true,
-              decoration: InputDecoration(
-                labelText: 'Password'
+            Expanded(
+              child: TextFormField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: 'Password'
+                )
               )
             )
           ],
